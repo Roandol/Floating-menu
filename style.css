@@ -1,6 +1,7 @@
 :root {
     --bg-neutro: #121a34;
     --translate-indicator: 5rem;
+    --translate-icon:-35px;
 }
 
 * {
@@ -72,7 +73,7 @@ section {
 }
 
 .navigation ul li.active a .icon {
-    transform: translateY(-35px);
+    transform: translateY(var(--translate-icon));
 }
 
 .navigation ul li a .text {
@@ -149,16 +150,21 @@ section {
 
 @media screen and (max-width: 450px) {
     :root {
-        --translate-indicator: 4.5rem;
+        --translate-indicator: 4rem;
+        --translate-icon: -39px;
     }
 
     .navigation ul {
         gap: 0.5rem;
     }
 
-    .navigation ul li, .indicator {
-        width: 4rem;
-        height: 4rem;
+    .navigation ul li {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .indicator {
+        left: 30px;
     }
 
 }
