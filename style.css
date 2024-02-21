@@ -154,6 +154,12 @@ section {
         --translate-icon: -39px;
     }
 
+    section {
+        position: fixed;
+        bottom: 0;
+        padding: 0;
+    }
+
     .navigation ul {
         gap: 0.5rem;
     }
@@ -164,7 +170,7 @@ section {
     }
 
     .indicator {
-        left: 30px;
+        left: 40px;
     }
 
 }
