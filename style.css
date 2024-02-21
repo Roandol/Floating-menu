@@ -98,7 +98,7 @@ section {
     border-radius: 50%;
     border: solid 0.5rem var(--bg-neutro);
     transition: 0.5s;
-    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
     z-index: 1;
 }
 
