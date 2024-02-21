@@ -1,5 +1,6 @@
 :root {
     --bg-neutro: #121a34;
+    --translate-indicator: 5rem;
 }
 
 * {
@@ -98,7 +99,7 @@ section {
     border-radius: 50%;
     border: solid 0.5rem var(--bg-neutro);
     transition: 0.5s;
-    /* transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     z-index: 1;
 }
 
@@ -127,21 +128,37 @@ section {
 }
 
 .navigation ul li:nth-child(1).active ~ .indicator {
-    transform: translateX(calc(5rem * 0));
+    transform: translateX(calc(var(--translate-indicator) * 0));
 }
 .navigation ul li:nth-child(2).active ~ .indicator {
-    transform: translateX(calc(5rem * 1));
+    transform: translateX(calc(var(--translate-indicator) * 1));
     
 }
 .navigation ul li:nth-child(3).active ~ .indicator {
-    transform: translateX(calc(5rem * 2));
+    transform: translateX(calc(var(--translate-indicator) * 2));
     
 }
 .navigation ul li:nth-child(4).active ~ .indicator {
-    transform: translateX(calc(5rem * 3));
+    transform: translateX(calc(var(--translate-indicator) * 3));
     
 }
 .navigation ul li:nth-child(5).active ~ .indicator {
-    transform: translateX(calc(5rem * 4));
+    transform: translateX(calc(var(--translate-indicator) * 4));
+
+}
+
+@media screen and (max-width: 450px) {
+    :root {
+        --translate-indicator: 4.5rem;
+    }
+
+    .navigation ul {
+        gap: 0.5rem;
+    }
+
+    .navigation ul li, .indicator {
+        width: 4rem;
+        height: 4rem;
+    }
 
 }
